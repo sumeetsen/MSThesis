@@ -1,0 +1,60 @@
+\chapter{INTRODUCTION}
+
+\section{Problem definition}
+
+\paragraph {}
+The Graphics Processing Unit, better known as GPUs came into existence to satisfy the ever increasing demand for computational power. It has proved to be especially effective in the field of computer graphics where the work load is parallel in nature i.e. same operations are performed on large set of data. One such field of research is the 'stereoscopy' where we create or enhance the illusion of depth.
+
+\paragraph {}
+This illusion is a result of viewing two different views of the same image by our eyes; which are reconstructed in the brain to give us an immersive experience or the 3D experience. The three most important components for 3D are the left-view channel, the right-view channel and the depth-map. The left and right views are color images that are captured through two different lenses separated by a small distance. Depth-map is a gray-scale image which represents the distance of the corresponding color pixel from the view-point.
+
+\paragraph {}
+There are different ways for obtaining the depth-maps for a scene. The most commonly used are the 'depth-from-stereo', 'depth-from-multi-view' or depth estimated using sensors. Even though these technologies are promising, there are few common limitations associated with them. The depth computed is sometimes inaccurate, noisy, of low resolution or even inconsistent over a video sequence. 
+
+\paragraph {}
+In spite of such drawbacks, reconstructing the other views using the depth image has significant advantages when we take into account the transmission of 3D content. Since depth-map is a gray scale image, it can be compressed significantly compared to a color image (left or right view). 
+
+\paragraph {}
+Now, compression adds its own characteristic artifacts (like blockiness) to the depth image. Thus, it can be seen that on the whole, the depth image suffers from inaccuracies, noise and compression artifacts. In case the view is rendered from such a depth-map, it will be crippled with severe distortions.
+
+  
+\section{Objective}
+
+\paragraph {}
+In this work, I tried to enhance the quality of such depth-maps at real time using GPUs. Bilateral filter was used for the iterative refinement process, using the information from one of the high quality texture (color) image i.e. the left or right view. 
+
+\paragraph {}
+In the proposed filtering method, we estimate a cost volume and then iteratively refine every slice to obtain the final depth map. The cost volume is built based on the current depth map. Bilateral filtering is then performed throughout each slice of the cost volume to produce a new cost volume. The refined depth map is generated based on the cost volume by selecting the depth hypothesis with the minimal cost.
+
+\paragraph {}
+In order to make the implementation more efficient, some modifications were proposed in the later works. It was observed that there is no need to form cost volume in order to obtain the depth estimate for every pixel and all iterations. Instead, the cost function can be formed only for required neighborhood before filtering it. Furthermore, the not all depth hypothesis were applicable for a given pixel. This computation cost can be reduced by taking into consideration only depth within certain range. Now, in case of compressed depth maps with blocky artifacts the depth range appears to be sparse due to the quantization effect. Such depth maps were scaled to further reduce the number of hypothesizes. 
+
+\paragraph {}
+The MEX implementation of this algorithm showed satisfactory results for both quantitative and qualitative experiments. Thus it was quite relevant for the mobile 3D TV kind of setup. My aim was to make the filtering work in real-time and hence we decided to port it on to a GPGPU (General Purpose Graphics Processing Unit).
+  
+\section{Research questions}
+\begin{itemize}
+	\item It is quite obvious that all algorithms can not be parallelized. We intend to find out whether filtering algorithms using Bilateral filter can attain desires speed-ups when implemented on GPU.
+	\item The ease of implementation of filtering algorithms on GPU using open specifications like the OpenCL.
+	\item The possible boost in computation efficiency that can be attained for OpenCL implementation over more traditional C code running on CPU. 
+\end{itemize}
+
+\section{Limitations}
+The OpenCL implementation provided in this thesis in not the most efficient one. The memory usage can be further optimized to extract better performance off the GPU. I did put it considerable efforts in this direction. However, it made the code unstable and inconsistent. 
+
+\section{Contribution}
+\begin{itemize}
+	\item I have tried to put forward the recent techniques to utilize the computing power of our computers which might contain single or multiple CPUs and GPUs. For this purpose I have used device agonistic and open source platform called OpenCL.
+	\item It will provide the reader a basic tutorial to start working with OpenCL. 
+	\item It also contains some of the tools which one might find useful while using OpenCL
+\end{itemize}
+
+\section{Structure of this thesis}
+The technical, theoretical and other background information which is necessary in order to understand the solutions and methods described later in the thesis is presented in this chapter. The contents of the chapter vary according to the field and study type.  
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+\select@language {english}
+\contentsline {paragraph}{}{II}{section*.3}
+\contentsline {paragraph}{}{II}{section*.4}
+\contentsline {paragraph}{}{II}{section*.5}
+\contentsline {chapter}{\numberline {1.}INTRODUCTION}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Problem definition}{1}{section.1.1}
+\contentsline {paragraph}{}{1}{section*.11}
+\contentsline {paragraph}{}{1}{section*.12}
+\contentsline {paragraph}{}{1}{section*.13}
+\contentsline {paragraph}{}{1}{section*.14}
+\contentsline {paragraph}{}{2}{section*.15}
+\contentsline {section}{\numberline {1.2}Objective}{2}{section.1.2}
+\contentsline {paragraph}{}{2}{section*.16}
+\contentsline {paragraph}{}{2}{section*.17}
+\contentsline {paragraph}{}{2}{section*.18}
+\contentsline {paragraph}{}{2}{section*.19}
+\contentsline {section}{\numberline {1.3}Research questions}{3}{section.1.3}
+\contentsline {section}{\numberline {1.4}Limitations}{3}{section.1.4}
+\contentsline {section}{\numberline {1.5}Contribution}{3}{section.1.5}
+\contentsline {section}{\numberline {1.6}Structure of this thesis}{3}{section.1.6}
+\contentsline {chapter}{\numberline {2.}A Brief Introduction to Stereoscopy}{4}{chapter.2}
+\contentsline {paragraph}{}{4}{section*.20}
+\contentsline {paragraph}{}{4}{section*.21}
+\contentsline {paragraph}{}{5}{section*.22}
+\contentsline {section}{\numberline {2.1}Stereoscopic 3D}{6}{section.2.1}
+\contentsline {paragraph}{}{6}{section*.23}
+\contentsline {paragraph}{}{6}{section*.24}
+\contentsline {paragraph}{}{6}{section*.25}
+\contentsline {paragraph}{}{6}{section*.30}
+\contentsline {section}{\numberline {2.2}Depth-Image Based Rendering}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Encoding of depth map}{7}{section.2.3}
+\contentsline {section}{\numberline {2.4}Issues related to Depth-maps}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Effects of improper 3D}{8}{section.2.5}
+\contentsline {section}{\numberline {2.6}Filtering of depth map}{8}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Spatial-Depth super resolution for Range Images}{9}{subsection.2.6.1}
+\contentsline {paragraph}{}{9}{section*.33}
+\contentsline {paragraph}{}{9}{section*.34}
+\contentsline {section}{\numberline {2.7}Transmission of stereo content}{9}{section.2.7}
+\contentsline {chapter}{\numberline {3.}OpenCL: The Open Source Specification for GPU Programming}{12}{chapter.3}
+\contentsline {paragraph}{}{12}{section*.35}
+\contentsline {paragraph}{}{12}{section*.36}
+\contentsline {section}{\numberline {3.1}The OpenCL Architecture}{12}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Platform Model}{12}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Execution model}{13}{subsection.3.1.2}
+\contentsline {paragraph}{}{13}{section*.38}
+\contentsline {paragraph}{}{13}{section*.39}
+\contentsline {paragraph}{}{14}{section*.40}
+\contentsline {subsection}{\numberline {3.1.3}Memory Model}{14}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Programming Model}{15}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Memory Objects}{16}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}The OpenCL Framework}{16}{subsection.3.1.6}
+\contentsline {section}{\numberline {3.2}The OpenCL Platform Layer}{18}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Querying Platform Info}{18}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Querying Devices}{18}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Partitioning a Device}{18}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Contexts}{18}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}The OpenCL Runtime}{18}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Command Queues}{18}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Buffer Objects}{18}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Image Objects}{18}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Sampler Objects}{18}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Program Objects}{18}{subsection.3.3.5}
+\contentsline {subsection}{\numberline {3.3.6}Kernel Objects }{18}{subsection.3.3.6}
+\contentsline {subsection}{\numberline {3.3.7}Executing Kernels}{18}{subsection.3.3.7}
+\contentsline {subsection}{\numberline {3.3.8}Flush and Finish}{18}{subsection.3.3.8}
+\contentsline {section}{\numberline {3.4}The OpenCL C Programming Language}{18}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Supported Data Types}{18}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Conversions and Type Casting}{18}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Operators}{18}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Vector Operations}{18}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Address Space Qualifiers}{18}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Access Qualifiers}{18}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.7}Function Qualifiers}{18}{subsection.3.4.7}
+\contentsline {subsection}{\numberline {3.4.8}Preprocessor Directive and Macros}{18}{subsection.3.4.8}
+\contentsline {section}{\numberline {3.5}Limitations of OpenCL}{18}{section.3.5}
+\contentsline {section}{\numberline {3.6}Performance considerations}{18}{section.3.6}
+\contentsline {paragraph}{Memory Optimizations}{19}{section*.44}
+\contentsline {paragraph}{NDRange Optimizations}{19}{section*.45}
+\contentsline {paragraph}{Instruction Optimizations}{19}{section*.46}
+\contentsline {paragraph}{Control Flow}{19}{section*.47}
+\contentsline {chapter}{\numberline {4.}ALGORITHM AND IMPLEMENTATION}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}Depth map filtering approach}{20}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Bilateral filter}{20}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Hypothesis filter}{21}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Implementation in OpenCL}{21}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Installing OpenCL}{21}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Example: Box Filter implementation in OpenCL}{21}{subsection.4.2.2}
+\contentsline {paragraph}{Illustration}{21}{section*.48}
+\contentsline {paragraph}{Basic steps for OpenCL programming}{21}{section*.49}
+\contentsline {paragraph}{The OpenCL code}{21}{section*.50}
+\contentsline {subsection}{\numberline {4.2.3}Implementation of Bilateral Filter}{22}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Implementation of Hypothesis filter}{22}{subsection.4.2.4}
+\contentsline {chapter}{\numberline {5.}RESULTS AND ANALYSIS}{23}{chapter.5}
+\contentsline {chapter}{\numberline {6.}CONCLUSION}{24}{chapter.6}
+\contentsline {section}{\numberline {6.1}Conclusion}{24}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future Works}{24}{section.6.2}
+\contentsline {chapter}{REFERENCES}{25}{section.6.2}
+\contentsline {chapter}{\numberline {A.}APPENDIX}{27}{appendix.A}

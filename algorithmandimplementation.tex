@@ -1,0 +1,72 @@
+\chapter{ALGORITHM AND IMPLEMENTATION}
+
+The  purpose  of  the  research  method  and  material  description  is  to  provide  the  reader 
+with a clear view on the implementation process for the reader to assess its reliability. 
+First,  it  may  be  useful  to  present  possible  alternative  research  methods  and  provide 
+grounds  for  the  reasons  behind  the  method  selection  in  the  thesis.  The  used  material 
+should be presented in detail so that there can be no confusion concerning its origin and 
+nature.  
+
+The  methods  should  be  described  in  such  detail  that  other  researchers  in  the  field 
+could reproduce the study. For instance, the mathematical grounds for new results must 
+be presented in such detail that the reader can follow the result process without having 
+to make long separate calculations. A brief note or reference is sufficient with regard to 
+generally known methods; more unusual methods, particularly those developed by the 
+author, are to be described in more detail. There should always be a clear connection 
+between the theoretical section and the research methods and material. If necessary, the 
+research methods and material can be dealt with in several chapters. The outlining and 
+headlining should be made in accordance with the nature and needs of the thesis.
+
+\section{Depth map filtering approach}
+We consider color video sequence in YUV color space $y(x,t) = [y^Y(x,t)\;\;y^U(x,t)\;\;y^V(x,t)]$
+
+\subsection{Bilateral filter}
+The purpose of this filter is to smooth the image while preserving the edges \cite{bilateral_1}. It utilizes the information form all color channels to specify suitable weights for local (non-linear) neighborhood filtering.  For  gray-scale images, local weights of neighbors are calculated based on both their spatial distance and their photometric similarity, favoring nearer values to distant ones in both spatial domain and intensity range. For color images, bilateral filtering uses color distance to distinguish photometric similarity between pixels, thus reducing phantom colors in the filtered image \cite{mobile_3DTV_1}.
+
+\begin{equation}
+\hat{Z}(k) = \frac{1}{F} \sum_{m\in\Gamma(k)} e^{-\frac{\|m-k\|^2}{2\sigma^2_s}} e^{-\frac{|Z(m)-z(k)|}{2\sigma^2_i}}
+\end{equation}
+
+where $\sigma_s$ and $\sigma_i$ controls the weights in spatial and intensity domains.
+
+\begin{equation}
+F = \sum_{m\in\Gamma(k)} e^{-\frac{\|m-k\|^2}{2\sigma^2_s}} e^{-\frac{|Z(m)-z(k)|}{2\sigma^2_i}}
+\end{equation}
+
+where $F$ is the normalization factor and $\Gamma(k)$ is a square window centered at $Z(k)$.
+
+
+\subsection{Hypothesis filter}
+
+\begin{equation}
+C_{(i)}(x,d) = \min(\delta*L,(d-\hat{Z}_{(i)}(x))^2)
+\end{equation}
+
+\begin{equation}
+\widehat{C_(i)}(x,d) = r(x)\sum_{u\in\Omega_x}W_s(\|x-u\|)W_c(|y(x)-y(u)|)C_{(i)}(u,d)
+\end{equation}
+
+\begin{equation}
+\hat{Z}_{(i+1)}(x) = arg \min_d(\widehat{C_(i)}(x,d))
+\end{equation}
+
+
+\section{Implementation in OpenCL}
+
+
+\subsection{Installing OpenCL}
+
+\subsection{Example: Box Filter implementation in OpenCL}
+
+\paragraph{Illustration}
+
+\paragraph{Basic steps for OpenCL programming}
+
+\paragraph{The OpenCL code}
+
+
+\subsection{Implementation of Bilateral Filter}
+
+\subsection{Implementation of Hypothesis filter}
+
+

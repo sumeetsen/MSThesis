@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper,english]{tutthesis}
+
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[small]{caption}
+\pagenumbering{Roman}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\vspace*{-.5cm}\noindent
+
+\begin {figure}[ht]
+\includegraphics[width=0.6\textwidth]{ttylogen8.jpg}
+\end{figure}
+
+\vspace{7.4cm}
+
+\noindent{\bf\large \textsf{Sumeet Sen}}\\
+{\bf\large \textsf{Implementation of Depth Map Filtering on GPU}}\\
+\textsf{Master of Science Thesis}
+
+\vspace{6.0cm} % jos kaksi otsikkoriviä vaihda -> 6.7cm
+
+\begin{flushright}
+
+\begin{minipage}[c]{6.8cm}
+\begin{spacing}{1.0}
+% Aqui van lo del examinador, y cuando se aprobo y esas cosas:
+\textsf{Examiners: Prof. Atanas Gotchev}\\
+\textsf{}\\
+\textsf{Examiner and topic approved in}\\
+\textsf{the Department of Signal Processing}\\
+\textsf{meeting on xx.xx.xxxx}\\
+\end{spacing}
+\end{minipage}
+\end{flushright}
+
+%NOTE: THE APOSTROPHE MUST BE ', NOT ´, OTHERWISE WILL GIVE ERROR
+
+
+\newpage
+% El abstract:
+\chapter*{ABSTRACT}
+\begin{spacing}{1.0}
+\textsf{TAMPERE UNIVERSITY OF TECHNOLOGY}\\
+\textsf{Master's Degree Programme in Information Technology}\\
+{\bf \textsf{Sumeet Sen : Implementation of Depth Map Filtering on GPU}}\\
+\textsf{Master of Science Thesis, xx pages, x Appendix pages}\\
+\textsf{May 2010}\\
+\textsf{Major: Signal processing}\\
+\textsf{Examiner:  Prof. Atanas Gotchev}\\
+\textsf{Keywords: General Purpose Graphics Processing Unit (GPGPU), OpenCL, Bilateral Filter, Hypothesis Filtering}\\
+\end{spacing}
+
+\paragraph{}
+First paragraph: Why use depth-map?          All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy...All work and no play makes Jack a dull boy, all work and no play makes Jack a dull boy, all work and no play makes Jack a dull boy.
+
+\paragraph{}
+Second paragraph: Why GPU and OpenCL?         All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy...All work and no play makes Jack a dull boy, all work and no play makes Jack a dull boy, all work and no play makes Jack a dull boy.
+
+\paragraph{}
+Third paragraph: How did we improve the situation ? How did we measure the improvement.      All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy,All work and no play makes Jack a dull boy.
+
+\newpage
+
+% the syntax \chapter*{title} will not numerate the chapter.
+
+\chapter*{PREFACE}
+\noindent The preface presents the general information concerning the thesis process. It describes 
+the supervisor's role and provides notes on the outside help the author received while 
+doing  the  work  (instructions,  guidance,  etc.).  With  regard  to  team  work,  the  author's 
+role in comparison to the other writers is described. Acknowledgements to the persons 
+and communities influencing the work process are generally presented in the preface. It 
+is not appropriate to criticise anyone in the preface. The maximum length of the preface 
+is one page. The date after which no revisions have been made, the author's signature, 
+name in block letters and, if so desired, the address and other contact information are 
+presented at the end of the preface. 
+
+
+\newpage
+\renewcommand\contentsname{Table of contents} % poista jos kieli muu kuin suomi
+\tableofcontents
+%\newpage
+%\listoffigures
+%\listoftables
+
+\newpage
+\renewcommand\listfigurename{List of Figures}
+\listoffigures
+
+\newpage
+\renewcommand\listtablename{List of Tables}
+\listoftables
+
+\newpage
+\chapter*{Abbreviations and notation}
+\begin{tabular}{ r l }
+\\
+\\
+\\
+GPGPU & General Purpose Graphics Processing Unit\\
+GPU & Graphics Processing Unit\\
+CPU & Central Processing Unit\\
+OpenCL & Open Computer Language\\
+2D & Two Dimension\\
+3D & Three Dimension\\
+CV & Computer Vision\\
+HVS & Human Visual System\\
+\end{tabular}
+
+\newpage
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter. \ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{}{}}
+\lhead{\fancyplain{}{\leftmark}}
+
+% Tästä alkaa varsinainen teksti
+\pagenumbering{arabic}
+
+%Following, all the main chapters of the thesis are included in separate files, for clarity and to facilitate the writing process.
+% Introduction
+\include{introduction}
+% Theoretical background
+\include{theoreticalbackground}
+% OpenCL
+\include{OpenCL}
+% Research methods and matherial
+\include{algorithmandimplementation}
+% Results and discussion of the results, possibly in separated chapters
+\include{resultsandanalysis}
+% Conclusion or Recommendations
+\include{conclusion}
+%Bibliography
+\include{bibliography}
+
+
+\appendix
+\renewcommand{\chaptername}{APPENDIX}
+\chapter{APPENDIX}
+\end{document}
